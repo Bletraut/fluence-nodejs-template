@@ -8,6 +8,6 @@
 
 # send message
 
-`./send_message.sh`
+`npm run sendMessage "message text"`
 
-Hello world string is hardcoded in the bash script, as well as the topic
+Send message to a special topic
