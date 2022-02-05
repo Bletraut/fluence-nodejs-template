@@ -5,6 +5,7 @@ import { advertiseMyself, registerMessagingService, sendMyself } from './_aqua/e
 const relay = krasnodar[3];
 
 const sk = Buffer.from('SVz4T4yW718wt0rziDVOfiv6+WQbS4lvEtJHEieXcAk=', 'base64');
+const topic = "cellautomat";
 
 async function main() {
     await Fluence.start({
@@ -23,11 +24,9 @@ async function main() {
 
     console.log('messaging service registered');
 
-    await advertiseMyself('hackathon');
+    await advertiseMyself(topic);
 
     console.log('messaging service advertised');
-
-    console.log('press any key to quit...');
 
     process.stdin.setRawMode(true);
     process.stdin.resume();

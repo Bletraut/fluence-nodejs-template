@@ -5,6 +5,7 @@
     "main": "index.js",
     "scripts": {
         "start": "node -r ts-node/register src/index.ts",
+        "sendMessage": "node -r ts-node/register src/sendMessage.ts",
         "prestart": "npm run compile-aqua",
         "compile-aqua": "aqua -i ./aqua/ -o ./src/_aqua",
         "watch-aqua": "chokidar \"**/*.aqua\" -c \"npm run compile-aqua\""
